@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Space+Mono:wght@400;700&display=swap");
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan2: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --light-grayish-cyan2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  font-family: 'Space Mono', sans-serif;
+  font-size: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: var(--light-grayish-cyan);
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+body main .logo {
+  width: 4rem;
+  padding: 2rem 0;
+}
+
+body main .card {
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 10px 10px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .card .left-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  padding: 0 .5rem;
+}
+
+body main .card .left-col .bill p {
+  font-size: .75rem;
+  color: var(--very-dark-cyan);
+  padding-bottom: .25rem;
+}
+
+body main .card .left-col .bill .bill__input {
+  width: 100%;
+  padding: .25rem .5rem .25rem 0;
+  background: var(--light-grayish-cyan2);
+  background-image: url("../images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-x: 5%;
+  border: none;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  text-align: right;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+  color: var(--very-dark-cyan);
+  font-size: 1rem;
+}
+
+body main .card .left-col .bill .bill__input:focus {
+  outline: solid 0.1rem var(--strong-cyan);
+}
+
+body main .card .left-col .select-tip p {
+  font-size: .75rem;
+  color: var(--very-dark-cyan);
+}
+
+body main .card .left-col .select-tip .select-tip__choices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  gap: 5%;
+}
+
+body main .card .left-col .select-tip .select-tip__choices .select-tip__btn {
+  width: 47.5%;
+  padding: .5rem;
+  background: var(--very-dark-cyan);
+  color: var(--white);
+  font-size: 1rem;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+
+body main .card .left-col .select-tip .select-tip__choices .select-tip__btn:hover {
+  background: var(--light-grayish-cyan);
+  cursor: pointer;
+  color: var(--very-dark-cyan);
+}
+
+body main .card .left-col .select-tip .select-tip__choices .active-btn {
+  background: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+body main .card .left-col .select-tip .select-tip__choices .select-tip__input {
+  background: var(--light-grayish-cyan2);
+  border: none;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  text-align: right;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+  color: var(--very-dark-cyan);
+  padding: 0 .5rem 0 0;
+  width: 47.5%;
+  font-size: 1rem;
+  height: 2.5rem;
+  margin-top: 5%;
+}
+
+body main .card .left-col .select-tip .select-tip__choices .select-tip__input:focus {
+  outline: solid 0.1rem var(--strong-cyan);
+  cursor: pointer;
+}
+
+body main .card .left-col .select-tip .select-tip__choices .active-input-tip {
+  outline: solid 0.1rem var(--strong-cyan);
+}
+
+body main .card .left-col .number-of-people p {
+  font-size: .75rem;
+  color: var(--very-dark-cyan);
+  padding-bottom: .25rem;
+}
+
+body main .card .left-col .number-of-people p span {
+  display: none;
+}
+
+body main .card .left-col .number-of-people .active-error-text span {
+  color: red;
+  display: block;
+}
+
+body main .card .left-col .number-of-people .active-error-input {
+  outline: solid 0.1rem red;
+}
+
+body main .card .left-col .number-of-people .number-of-people__input {
+  width: 100%;
+  padding: .25rem .5rem .25rem 0;
+  background: var(--light-grayish-cyan2);
+  background-image: url("../images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-x: 5%;
+  border: none;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  text-align: right;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+  color: var(--very-dark-cyan);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+body main .card .right-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: var(--very-dark-cyan);
+  border-radius: 10px;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+body main .card .right-col .amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+body main .card .right-col .amount .tip__amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .card .right-col .amount .tip__amount p {
+  display: block;
+  color: var(--white);
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+body main .card .right-col .amount .tip__amount p span {
+  display: block;
+  color: var(--light-grayish-cyan);
+  font-size: .5rem;
+}
+
+body main .card .right-col .amount .tip__amount .tip__value {
+  font-size: 1.25rem;
+  color: var(--strong-cyan);
+}
+
+body main .card .right-col .amount .total__amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .card .right-col .amount .total__amount p {
+  display: block;
+  color: var(--white);
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+body main .card .right-col .amount .total__amount p span {
+  display: block;
+  color: var(--light-grayish-cyan);
+  font-size: .5rem;
+}
+
+body main .card .right-col .amount .total__amount .total__value {
+  font-size: 1.25rem;
+  color: var(--strong-cyan);
+}
+
+body main .card .right-col .reset__btn {
+  padding: .5rem;
+  background: var(--strong-cyan);
+  border: none;
+  border-radius: 5px;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: .75rem;
+  text-align: center;
+  font-family: 'Space Mono', sans-serif;
+}
+
+body main .card .right-col .reset__btn:hover {
+  background: var(--light-grayish-cyan);
+  cursor: pointer;
+}
+
+body main .card .right-col .reset__btn:disabled {
+  opacity: .3;
+}
+
+body main .card .right-col .reset__btn:disabled:hover {
+  background: var(--strong-cyan);
+}
+
+@media only screen and (min-width: 1200px) {
+  body main {
+    height: 100vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .logo {
+    padding: 0 0 4rem 0;
+  }
+  body main .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+    border-radius: 25px;
+    max-width: 40rem;
+    -webkit-box-shadow: 0 20px 50px var(--dark-grayish-cyan);
+            box-shadow: 0 20px 50px var(--dark-grayish-cyan);
+    padding: 1.5rem;
+  }
+  body main .card .left-col {
+    width: 50%;
+  }
+  body main .card .left-col .select-tip .select-tip__choices .select-tip__btn {
+    width: 30%;
+  }
+  body main .card .left-col .select-tip .select-tip__choices .active-btn {
+    background: var(--light-grayish-cyan);
+    color: var(--very-dark-cyan);
+  }
+  body main .card .left-col .select-tip .select-tip__choices .select-tip__input {
+    width: 30%;
+    text-align: center;
+    padding: 0;
+  }
+  body main .card .left-col .select-tip .select-tip__choices .active-input-tip {
+    outline: solid 0.1rem var(--strong-cyan);
+  }
+  body main .card .left-col .number-of-people p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body main .card .left-col .number-of-people p span {
+    display: none;
+  }
+  body main .card .left-col .number-of-people .active-error-text span {
+    color: red;
+    display: block;
+  }
+  body main .card .left-col .number-of-people .active-error-input {
+    outline: solid 0.1rem red;
+  }
+  body main .card .right-col {
+    width: 50%;
+    padding: 2rem;
+  }
+  body main .card .right-col .amount .tip__amount .tip__value {
+    font-size: 2rem;
+  }
+  body main .card .right-col .amount .total__amount .total__value {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
